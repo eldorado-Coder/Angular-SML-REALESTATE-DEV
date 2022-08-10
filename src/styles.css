@@ -1,0 +1,311 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    /* font-size: 62.5%; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+li,ul,a {
+    list-style: none;
+    text-decoration: none;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+/***** HOW DO YOU IMPORT FONTS ********/
+
+
+@font-face {
+    font-family: din;
+    src: url(src/assets/fonts/D-DIN.otf);
+}
+
+@font-face {
+    font-family: dinCon;
+    src: url(src/assets/fonts/D-DINCondensed-Bold.otf);
+}
+
+@font-face {
+  font-family: robotoLight;
+  src: url(src/assets/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: dinConReg;
+  src: url(src/assets/fonts/D-DINCondensed.otf);
+}
+
+/*details page thumbnail carousel start*/
+
+.details-page-carousel #sync2 .item {
+  background: #c9c9c9;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  height: 100px;
+}
+
+.details-page-carousel #sync2 .item img,
+.details-page-carousel #sync1 .item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-page-carousel #sync1 .item {
+  height: 420px;
+}
+
+.details-page-carousel .owl-prev,
+.details-page-carousel .owl-next {
+  position: absolute;
+  top: 45%;
+}
+
+.details-page-carousel #sync2 .owl-prev,
+.details-page-carousel #sync2 .owl-next {
+  top: 35%;
+}
+
+.details-page-carousel .owl-prev {
+  left: 0;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.details-page-carousel .owl-next {
+  right: 0;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.details-page-carousel .owl-theme .owl-nav [class*=owl-],
+.details-page-carousel .owl-theme .owl-nav [class*=owl-]:hover {
+  border-radius: 0;
+  background: none;
+}
+
+.details-page-carousel #sync2 .owl-item.active {
+  opacity: 0.6;
+}
+
+.details-page-carousel #sync2 .owl-item.active.current {
+  opacity: 1;
+}
+
+.details-page-carousel .owl-next.disabled, .owl-prev.disabled {
+  display: none !important;
+}
+
+/*details page thumbnail carousel end*/
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*home page contact form start*/
+
+.welcome .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #818181;
+}
+
+.welcome .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: #67D0CE;
+}
+
+.welcome .mat-focused .placeholder {
+  color: transparent;
+}
+
+.welcome .mat-form-field-label {
+  color: #818181!important;
+}
+
+.welcome .contact-form .mat-form-field-infix {
+  width: 420px;
+  border-radius: 2px;
+}
+
+.welcome .contact-form .mat-form-field-wrapper,
+.mat-form-field-wrapper {
+  padding-bottom: 10px;
+}
+
+.welcome .contact-form .message-input .mat-form-field-infix {
+  height: 141px;
+}
+
+.detail-content .welcome .message-input .mat-form-field-infix {
+  height: 142px;
+}
+
+.home-page-carousel #home-carousel .item img,
+.home-page-carousel #home-carousel .item img {
+  height: 300px;
+  object-fit: cover;
+  width: auto;
+}
+
+.home-page-carousel #home-carousel .item {
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  z-index: 999;
+}
+
+.home-page-carousel .owl-prev {
+  left: 0;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.home-page-carousel .owl-next {
+  right: 0;
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.home-page-carousel .owl-prev,
+.home-page-carousel .owl-next {
+  position: absolute;
+  top: 175px;
+}
+
+.home-page-carousel .owl-theme .owl-nav [class*=owl-],
+.home-page-carousel .owl-theme .owl-nav [class*=owl-]:hover {
+  border-radius: 0;
+  background: none;
+}
+
+.home-page-carousel .owl-carousel .owl-stage {
+  padding-left: 0 !important;
+  height: 300px;
+}
+
+.home-page-carousel .address-svg {
+  display: flex;
+  align-items: center;
+  color: #505050;
+  margin-top: 12px;
+}
+
+.home-page-carousel .address-svg svg {
+  margin-right: 10px;
+}
+
+.home-page-carousel .address {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.home-page-carousel .address a {
+  color: inherit;
+}
+
+.home-page-carousel h6 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1C1F36;
+  margin: 5px 1px;
+}
+
+.home-page-carousel .bed-bath {
+  font-size: 15px;
+  color: #757373;
+}
+
+@media all and (max-width: 1250px) {
+  .welcome .contact-form .mat-form-field-infix {
+    width: 220px;
+  }
+}
+
+/*home page contact form end*/
+
+/*recommendations page start*/
+
+.rec-footer-carousel {
+  width: 100%;
+}
+
+.rec-footer-carousel .owl-carousel .owl-dots.disabled,
+.rec-footer-carousel .owl-carousel .owl-nav.disabled {
+  display: block;
+}
+
+.rec-footer-carousel .item img {
+  width: 335.94px;
+  height: 210px;
+}
+
+.rec-footer-carousel .owl-stage-outer {
+  height: 425px;
+}
+
+.rec-footer-carousel .owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 45px;
+}
+
+.rec-footer-carousel .owl-prev {
+  left: -60px;
+}
+
+.rec-footer-carousel .owl-next {
+  right: -60px;
+}
+
+.rec-footer-carousel .owl-theme .owl-dots .owl-dot span {
+  border-radius: 0;
+}
+
+.rec-footer-carousel .owl-theme .owl-dots .owl-dot.active span,
+.rec-footer-carousel .owl-theme .owl-dots .owl-dot:hover span {
+  background: #31bdba;
+}
+
+.rec-footer-carousel .owl-theme .owl-dots .owl-dot.active span {
+  width: 60px;
+}
+
+.recommendations-carousel .owl-stage-outer {
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+.recommendations-carousel .owl-stage-outer .item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1108px;
+  margin: auto;
+}
+
+.recommendations-carousel .owl-prev,
+.recommendations-carousel .owl-next {
+  color: #818181!important;
+  font-family: Roboto;
+  font-size: 16px!important;
+}
+
+.recommendations-carousel .owl-prev,
+.recommendations-carousel .owl-next {
+  position: relative;
+  top: 20px;
+}
+
+.recommendations-carousel .owl-prev:hover,
+.recommendations-carousel .owl-next:hover {
+  color: #31bdba!important;
+}
+
+.recommendations-carousel .owl-prev {
+  left: -80px;
+}
+
+.recommendations-carousel .owl-next {
+  right: -80px;
+}
+/*recommendations page end*/

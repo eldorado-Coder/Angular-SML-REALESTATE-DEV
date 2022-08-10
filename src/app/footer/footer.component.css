@@ -1,0 +1,226 @@
+#footer {
+    position: relative;
+    bottom: 0;
+}
+.footer-container {
+    background-color: #1C1F36;
+    /* height: 324px; */
+    width: 100%;
+    position: fixed; /* Make it stick/fixed */
+    bottom: 0; /* Stay on top */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+
+}
+
+.social-networks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #31BDBA;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding: 11px 0;
+}
+.social-svg {
+    display: flex;
+    padding-left: 40px;
+    height: 25px;
+}
+.social-media-svg {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 34px;
+    cursor: pointer;
+}
+
+.social-media-svg img {
+  width: 25px;
+}
+
+.youtube-icon-hover,
+.instagram-icon-hover,
+.twitter-icon-hover,
+.linkedin-icon-hover {
+  display: none;
+}
+
+.social-media-svg.youtube:hover .youtube-icon-hover,
+.social-media-svg.instagram:hover .instagram-icon-hover,
+.social-media-svg.twitter:hover .twitter-icon-hover,
+.social-media-svg.linkedin:hover .linkedin-icon-hover {
+  display: inline-block;
+}
+
+.social-media-svg.youtube:hover .youtube-icon,
+.social-media-svg.instagram:hover .instagram-icon,
+.social-media-svg.twitter:hover .twitter-icon,
+.social-media-svg.linkedin:hover .linkedin-icon {
+  display: none;
+}
+
+.border {
+    height: 4px;
+    background: linear-gradient(to right, #31bdba 0%, #118fb0 30%, #0077aa 64%, #133459 100%);
+
+}
+.about-nav-contact {
+    display: flex;
+    margin-bottom: 35px;
+    /* position: top; */
+}
+h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    padding-bottom: 14px;
+    margin-top: 20px;
+}
+hr {
+    border: none;
+    width: 120px;
+    height: 2px;
+    background-color: #31BDBA;
+    margin-bottom: 23px;
+}
+li {
+    padding: 8px 0 8px 0 ;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    color: #F8F8F8;
+}
+
+li:hover {
+  color: #31bdba;
+}
+
+.footer-content {
+    height: 294px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding-bottom: 20px;
+
+}
+.footer-sml-svg {
+    margin-right: 100px;
+    position: relative;
+    bottom: 25px;
+}
+
+.footer-sml-svg p {
+  font-size: 14.5px;
+  margin-top: 3px;
+  line-height: 1.7;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.footer-about {
+    width: 322px;
+    margin-right: 55px;
+}
+.about-us {
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer-navigate {
+    width: 168px;
+    margin-right: 55px;
+}
+.footer-contact {
+    width: 165px;
+    margin-right: 55px;
+}
+.copyright {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 16px;
+    letter-spacing: 1.8px;
+}
+
+.copyright p {
+  opacity: 0.5;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media all and (max-width: 1250px) {
+  .footer-content {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .footer-sml-svg {
+    position: relative;
+    bottom: 0;
+    margin: 40px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-about,
+  .footer-navigate,
+  .footer-contact {
+    width: auto;
+    max-width: 33.3%;
+  }
+
+  .footer-navigate,
+  .footer-contact {
+    max-width: 160px;
+  }
+
+  .about-nav-contact {
+    justify-content: center;
+    padding: 0 20px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .about-nav-contact {
+    flex-wrap: wrap;
+  }
+
+  .footer-about,
+  .footer-navigate,
+  .footer-contact {
+    max-width: 60%;
+    margin-right: 0;
+    width: 60%;
+  }
+
+  .about-nav-contact {
+    text-align: center;
+  }
+
+  .about-nav-contact hr {
+    margin: 10px auto;
+  }
+
+  .social-networks {
+    flex-wrap: wrap;
+    padding: 10px 0;
+    height: auto;
+  }
+
+  .social-networks p {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

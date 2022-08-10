@@ -1,0 +1,532 @@
+.header-container {
+    /* height: 474px; */
+    position: relative;
+}
+
+.background-image{
+    width: 100%;
+    height: 100%;
+    background-image: url(src/assets/bg1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -3;
+    position: absolute;
+}
+
+.background-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* z-index: 8; */
+}
+
+.search-form {
+    padding-top: 198px;
+    padding-bottom: 71px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    max-width: 1108px;
+    margin: 0 120px;
+}
+
+.search-bar {
+    width: 1109px;
+    height: 55px;
+    border: none;
+    padding-left: 35px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #505050;
+    -webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.submit-btn {
+  height: 55px;
+  width: 168px;
+  border: none;
+  background: #31BDBA;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1C1F36;
+  color: #31bdba;
+}
+
+.submit-btn:focus {
+  outline: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 13px;
+    width: 100%;
+}
+
+/*********** CHECKBOXES ***********/
+.homeType-links .checkbox-test label {
+  color: #1C1F36;
+}
+
+.homeType-links .checkbox-test label:hover {
+  color: #ffffff;
+}
+
+.homeType-links .checkbox-test label::before {
+  border: .05em solid #1C1F36;
+}
+
+.homeType-links .checkbox-test input[type="checkbox"]:hover + label::before {
+  border: .05em solid #ffffff;
+}
+
+.homeType-links .checkbox-test input[type="checkbox"]:checked:hover + label::before {
+  border: .05em solid #ffffff;
+}
+
+.homeType-links .checkbox-test input[type="checkbox"]:checked + label::before {
+  border: .05em solid #ffffff;
+}
+
+a.checkbox-test:not(:last-of-type) {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.homeType-links {
+  margin-top: 10px!important;
+}
+
+.homeType-links:hover {
+  display: block;
+}
+
+.homeType-links::after {
+  content: " ";
+  position: absolute;
+  left: 30px;
+  top: -10px;
+  border-top: none;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  pointer-events: none;
+}
+
+.checkbox-test {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-test label {
+    cursor: pointer;
+    display: flex;
+    color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+}
+
+.checkbox-test input[type="checkbox"] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-test label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: .05em solid white;
+  border-radius: 0.15em;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+.checkbox-test input[type="checkbox"]:hover + label::before {
+  background-image: url(src/assets/checked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.checkbox-test input[type="checkbox"]:checked:hover + label::before {
+  background-image: url(src/assets/unchecked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.checkbox-test input[type="checkbox"]:checked + label::before {
+  background-image: url(src/assets/checked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+  /* **************************************************** */
+
+
+
+  .lease, .buy {
+      margin-right: 10px;
+  }
+
+
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1108px;
+    margin: 0 120px;
+    padding-bottom: 66px;
+}
+
+.padding {
+    /*margin-right: 113px;*/
+}
+
+/* more filters */
+.more-filters {
+    height: 55px;
+    background-color: #1C1F36;
+}
+
+.basic-filter {
+    height: 100%;
+    margin: 0 120px;
+    max-width: 1108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basic-filter-center {
+  /*justify-content: center;*/
+}
+
+#home-type, #price, #beds {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
+
+#leaseDrop {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
+
+#baths {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
+
+#sqf {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
+
+.filter-ex {
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    color: #31BDBA;
+    cursor: pointer;
+}
+
+.filter-ex:hover {
+  color: #ffffff;
+}
+
+
+.disBtn {
+    display: none;
+}
+
+
+.top {
+    padding: 19px 0 17px 34px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: -24px;
+}
+
+.absolute {
+    position: relative;
+}
+
+.hiddenFilters {
+    background-color: #1C1F36;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 30px 120px 0 120px;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.filter-dropdown {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1108px;
+}
+
+.hfd {
+  width: 20%;
+}
+
+#homeType,
+#price,
+#beds,
+#baths,
+#sqf-lease {
+  width: 20%;
+  padding: 17px 0;
+}
+
+.filter-row {
+    display: flex;
+    margin-right: 10px;
+    padding: 10px 20px 30px 0;
+    margin-left: 0;
+}
+
+.filter-row label {
+  margin-left: 0;
+}
+
+.extended-filters {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+#community-center {
+    padding-right: 15px;
+}
+
+.svg-up-arrow {
+    right: 40px;
+    top: 579px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.svg-up-arrow .up-hover {
+  display: none;
+}
+
+.svg-up-arrow:hover .up-hover {
+  display: block;
+}
+
+.svg-up-arrow:hover .up-resting {
+  display: none;
+}
+
+.hiddenFilt {
+  width: 200px !important;
+}
+
+.hiddenDrops {
+    display: none !important;
+}
+
+#sqf-lease {
+    display: flex;
+    align-items: center;
+}
+
+
+/* extended checkbox filters workthrough */
+
+.filter-row label {
+    cursor: pointer;
+    display: flex;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.filter-row input[type="checkbox"] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.filter-row label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: .05em solid white;
+  border-radius: 0.15em;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+.filter-row input[type="checkbox"]:hover + label::before {
+  background-image: url(src/assets/checked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.filter-row input[type="checkbox"]:checked:hover + label::before {
+  background-image: url(src/assets/unchecked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.filter-row input[type="checkbox"]:checked + label::before {
+  background-image: url(src/assets/checked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+#beds .beds-links,
+#baths .baths-links {
+  width: 140px;
+  min-width: 140px;
+}
+
+#beds .beds-links a,
+#baths .baths-links {
+  cursor: pointer;
+}
+
+#beds .beds-links a:hover,
+#baths .baths-links a:hover {
+  color: #ffffff;
+}
+
+#beds .beds-links button,
+#baths .baths-links button {
+  width: 140px;
+}
+
+/* ************************************************* */
+
+.country, .usa, .canada, .city, .homeType, .price,
+.beds, .baths, .sqf, .leaseDrop {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #country, #usa, #canada, #city {
+      /*margin-right: 106px;*/
+  }
+
+  .homeType-links button {
+      background-color: #31BDBA;
+      border: none;
+      color: #ffffff;
+      width: 271px;
+      height: 48px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      cursor: pointer;
+  }
+
+  .homeType-links {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .zip {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .fa-caret-down {
+      padding-left: 10px;
+  }
+
+  .country-links, .usa-links, .city-links, .zip-links,
+  .homeType-links, .price-links, .beds-links, .baths-links,
+  .sqf-links, .leaseDrop-links {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 100%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    margin-top: 1px;
+    border-radius: 5px;
+  }
+
+  .country-links a, .usa-links a, .canada-links a,
+  .city-links a, .zip-links a, .homeType-links a, .price-links input,
+  .beds-links a, .baths-links a, .sqf-links a, .leaseDrop-links a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .country-links a:hover, .usa-links a:hover, .canada-links a:hover,
+    .city-links a:hover, .zip-links a:hover, .homeType-links a:hover,
+    .price-links a:hover, .beds-links a:hover, .baths-links a:hover,
+    .sqf-links a:hover, .leaseDrop-links a:hover
+     {background-color: #31BDBA}
+
+  #country:hover .country-links, #usa:hover .usa-links,
+    #canada:hover .canada-links, #city:hover .city-links,
+    #zip:hover .zip-links, #homeType:hover .homeType-links,
+    #beds:hover .beds-links, #baths:hover .baths-links,
+    #price:hover .price-links, #sqf:hover .sqf-links,
+    #leaseDrop:hover .leaseDrop-links {display: block;}
+
+
+

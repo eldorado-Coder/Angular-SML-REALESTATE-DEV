@@ -1,0 +1,141 @@
+.header-image {
+    background-image: url(src/assets/representation-home.png);
+    height: 535px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.display {
+    z-index: 9;
+    position: absolute;
+    top: 40px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 918px;
+    transform: translate(260px, 429px);
+    padding-left: 94px;
+    padding-right: 94px;
+}
+
+.display h3 {
+    font-size: 48px;
+    padding-top: 54px;
+    padding-bottom: 25px;
+}
+
+.display p {
+    text-align: center;
+    color: #505050;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+}
+
+.list-form {
+    margin-top: 180px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 21px;
+}
+
+.input-field {
+    padding: 20px 226px 19px 17px;
+    margin-bottom: 17px;
+}
+
+textarea {
+    padding: 18px 246px 37px 17px;
+}
+
+#submit-btn {
+    padding: 16px 85px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #31BDBA;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.why-us {
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.why-us h3 {
+    font-size: 48px;
+    padding-top: 80px;
+    padding-bottom: 55px;
+}
+
+.reasons {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.paper-work {
+    margin-right: 20px;
+}
+
+.paper-svg {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.free-svg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.save-svg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.des {
+    width: 300px;
+    text-align: center;
+}
+
+.one {
+    margin-bottom: 15px;
+    letter-spacing: 2.86;
+    color: #818181;
+    font-weight: 300;
+}
+
+.two {
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+}
+
+.quirk {
+    padding-left: 30px;
+    padding-right: 30px;
+}

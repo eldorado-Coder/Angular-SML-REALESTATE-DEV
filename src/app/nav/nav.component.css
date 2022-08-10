@@ -1,0 +1,506 @@
+.main-nav {
+    width: 100vw;
+    height: 55px;
+    background-color: #ffffff;
+    /* opacity: 92% !important; */
+    background-color: rgba(255, 255, 255, 0.92);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+    z-index: 300;
+    position: fixed;
+}
+
+/* overlay */
+
+
+/* ngclasses */
+.hidden {
+  display: none !important;
+}
+
+
+.upHidden {
+  display: none !important;
+}
+
+.inHidden {
+  display: none !important;
+}
+
+.noDecoration {
+  text-decoration: none !important;
+  color: #1C1F36 !important;
+}
+
+.addDecoration {
+  text-decoration: underline;
+  color: #31BDBA;
+}
+
+/* ************** */
+
+.overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+ left: 0;
+ top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.sign-in {
+  display: flex;
+}
+
+.sign-in-svg {
+  color: #31BDBA;
+  text-decoration: underline #31BDBA;
+}
+
+
+/* NOT WORKING, HAS SOMETHING TO DO WITH NG CLASS ON CLICK */
+.sign-up-svg:hover {
+color: #31BDBA;
+text-decoration: underline #31BDBA;
+}
+
+.sign-in-svg:hover {
+  color: #31BDBA;
+  text-decoration: underline #31BDBA;
+}
+
+.sign-svg {
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px 0 0 5px;
+  padding-top: 80px;
+}
+
+.left-box h3 {
+  font-size: 48px;
+  display: flex;
+
+}
+
+.sign-in-input {
+  margin-left: 56px;
+  margin-right: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.email-pass input {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 226px 19px 17px;
+  border: 1px solid #757373;
+  border-radius: 5px;
+}
+
+#email {
+  margin-bottom: 17px;
+  margin-top: 40px;
+}
+
+#password {
+  margin-bottom: 25px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  align-self: baseline;
+  margin-bottom: 59px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #505050;
+}
+
+.remember label {
+  margin-left: 10px;
+}
+
+#button1, #button2 {
+  padding: 17px 170px;
+  background-color: #31BDBA;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.forgot {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #505050;
+  /* cursor: pointer; */
+}
+
+/* sign up overlay */
+
+.sign-up-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 56px;
+  margin-right: 59px;
+}
+
+.check {
+  /* padding-right: 82px; */
+  color: #505050;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  /* width: stretch; */
+}
+
+.check1 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.check2 {
+  margin-bottom: 27px;
+}
+
+.submitting {
+  margin-top: 25px;
+  max-width: 386px;
+  text-align: center;
+  color: #505050;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+}
+
+.check1 label {
+  margin-left: 10px;
+}
+
+.check2 label {
+  margin-left: 10px;
+}
+
+.right-box {
+  background-image: url(src/assets/sign-in.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 450px;
+  height: 592px;
+}
+
+.material-icons {
+  float: right;
+  padding-top: 15px;
+  padding-right: 15px;
+  width: 38px;
+  height: 39px;
+  font-weight: 300;
+}
+
+.sml-svg {
+    margin-left: 73px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+/* dropdown button */
+.buy, .lease {
+    background-color: transparent;
+    color: black;
+    padding: 16px;
+    border: none;
+  }
+
+  .fa-caret-down {
+      padding-left: 10px;
+  }
+
+  /* housing div */
+  .nav-links {
+    position: relative;
+    display: flex;
+    margin-right: 66.5px;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .btn-signin {
+    background-color: gray;
+    width: 100% !important;
+    padding: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-signin:hover {
+    color: #31BDBA;
+  }
+
+  .label-remember {
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /* dropdown content */
+  .lease-links {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 100%;
+    min-width: 235px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+
+  .lease-links2 {
+    display: none;
+    position: absolute;
+    top: -1px;
+    left: 235px;
+    background-color: #ffffff;
+    opacity: 100%;
+    min-width: 235px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 1px;
+    border-radius: 5px;
+  }
+  .buy-links {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 100%;
+    min-width: 235px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+
+  .buy-links2 {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 100%;
+    min-width: 235px;
+    top: -1px;
+    left: 235px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 1px;
+    border-radius: 5px;
+  }
+
+  .lease-links2-auto {
+    top: 85px;
+  }
+
+  .lease-links2-furniture {
+    top: 127px;
+  }
+
+  .lease-links2-home {
+    top: 41.5px;
+  }
+
+  .lease-links a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .buy-links a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .lease-links a:hover  {
+    background-color: #31BDBA;
+    color: #ffffff;
+  }
+  .buy-links a:hover {
+    background-color: #31BDBA;
+    color: #ffffff;
+  }
+
+  .lease-links-all:not(:last-of-type),
+  .buy-links-all:not(:last-of-type),
+  .lease-links2 div:not(:last-of-type),
+  .buy-links2 div:not(:last-of-type) {
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  .lease-links a.top-margin,
+  .buy-links a.top-margin {
+    margin-top: 5px;
+  }
+
+  .lease-links a.bottom-margin,
+  .buy-links a.bottom-margin {
+    margin-bottom: 5px;
+  }
+
+  .lease-links:after,
+  .buy-links:after {
+    content: " ";
+    position: absolute;
+    left: 30px;
+    top: -10px;
+    border-top: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    pointer-events: none;
+  }
+
+   #lease:hover .lease-links {display: block;}
+
+   .lease-links-all:hover .lease-links2 {display: block;}
+   .buy-links-all:hover .buy-links2 {display: block;}
+
+   #buy:hover .buy-links {display: block;}
+
+  .lease-links-all.active,
+  .buy-links-all.active {
+     background: #31BDBA;
+  }
+
+  .lease-links-all.active a.active,
+  .buy-links-all.active a.active {
+    color: #ffffff;
+  }
+
+  #lease,
+  #buy,
+  #help {
+    padding: 20px 0;
+  }
+
+  #help {
+    display: flex;
+    align-items: center;
+  }
+
+  #lease:hover .lease {
+      color: #31BDBA;
+      cursor: pointer;
+    }
+  #buy:hover .buy {
+      color: #31BDBA;
+      cursor: pointer;
+    }
+
+  .list-hover:hover {color: #31BDBA;}
+  .sign-hover:hover {color: #31BDBA;}
+  .agent-hover:hover {color: #31BDBA;}
+
+  .list {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+  }
+
+  a {
+    color: black;
+  }
+
+  .sign, .agent {
+    display: flex;
+    align-items: center;
+    padding:  12px 16px;
+    cursor: pointer;
+  }
+
+  .text {
+      font-size: 16px;
+  }
+
+  .sign-in-form {
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    position: relative;
+  }
+ 
+  .sign-in-form .mat-form-field {
+    width: 100%;
+  }
+
+  .sign-in-form .mat-form-field-wrapper {
+    background-color: white;
+  }
+
+  .sign-up-form {
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    position: relative;
+  }
+ 
+  .sign-up-form .mat-form-field {
+    width: 100%;
+  }
+
+  .sign-up-form .mat-form-field-wrapper {
+    background-color: white;
+  }
+
+  .signin-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signin-footer .forgot-pwd {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .signin-footer span {
+    margin-right: 5px;
+  }
+
+  ::ng-deep .mat-form-field-appearance-fill.mat-form-field-flex {
+    background-color: white;
+  }
+  
+  .times-icon {
+    color: #31BDBA; 
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }

@@ -1,0 +1,330 @@
+#streetview-map {
+  display: none;
+}
+
+#streetview-pano {
+  width: 100%;
+  height: 100%;
+}
+
+#streetview-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#streetview-container.no-street-view {
+  width: 0;
+  height: 0;
+}
+
+.no-street-view-container {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+  width: 900px;
+}
+
+.no-street-view-container .sml-svg {
+  width: auto;
+  position: relative;
+}
+
+h1.no-street-view {
+  max-width: 850px;
+  text-align: center;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 48px;
+  margin-bottom: 54px;
+}
+
+p.no-street-view {
+  width: 550px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #505050;
+  font-weight: 300;
+  margin: 0 auto;
+}
+
+.main {
+  height: calc(100vh - 350px);
+  z-index: -1;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 73px;
+    padding-right: 73px ;
+    -webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+}
+
+.svg-left {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+
+.back {
+  color: #1C1F36;
+  display: flex;
+  cursor: pointer;
+}
+
+.links ul {
+  display: flex;
+}
+
+.links ul li {
+  cursor: pointer;
+}
+
+.links ul li:hover {
+  color: #31bdba;
+}
+
+.arrow {
+  border: solid #1C1F36;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 7px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 24px;
+}
+
+.back:hover {
+  color: #31BDBA;
+}
+
+.back:hover .arrow {
+  border: solid #31bdba;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 7px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 24px;
+}
+
+.photo-header, .street-header {
+    margin-right: 49px;
+}
+.sml-svg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    position: absolute;
+    /* margin-top: 700px; */
+    bottom: 110px;
+    z-index: -3;
+}
+
+.contact-footer {
+    width: 100vw;
+    /* height: 81px; */
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    margin-top: 31px;
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 49.2px;
+    margin-bottom: 38.2px;
+}
+
+.main.no-street-view {
+  position: relative;
+}
+
+.image {
+    background-image: url(src/assets/streetview.png);
+    width: 1267px;
+    height: 675px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* footer */
+
+.btn {
+    width: 261px;
+    height: 49px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: #31BDBA;
+    border: none;
+    color: #ffffff;
+}
+
+.agent {
+    margin-right: 21px;
+}
+
+.svg-up {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-start;
+}
+
+.svg {
+    position: sticky;
+    bottom: 4rem;
+    right: 0;
+}
+
+.hiddenAgent {
+    display: none !important;
+}
+
+.hiddenTour {
+    display: none !important;
+}
+
+.overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 400;
+   left: 0;
+   top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.6);
+    /* opacity: 60%; */
+}
+
+.request-form {
+    width: 940px;
+    height: 636px;
+    background-color: #ffffff;
+    opacity: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+.request-form button {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    font-size: 20px;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    margin-top: 21px;
+    margin-right: 21px;
+}
+
+.request-form h3 {
+     font-size: 48px;
+     color: #1C1F36;
+     margin-bottom: 50px;
+
+}
+
+
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#tour {
+    width: 363.74px;
+    height: 55px;
+}
+
+#message {
+    resize: none;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+
+#fname, #lname, #email {
+    width: 363.74px;
+    height: 65px;
+    padding-left: 10px;
+    /* border-radius: 5px; */
+}
+
+#fname, #lname, #tour {
+    margin-bottom: 17px;
+
+}
+
+.form-container {
+    display: flex;
+
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20.22px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.send-btn {
+    margin-top: 50px;
+    width: 217px;
+    height: 48px;
+    background-color: #31BDBA;
+    border: none;
+    color: #ffffff;
+}
+
+.buttons {
+    margin-bottom: 16px;
+}
+
+.btn {
+    width: 230px;
+    height: 49px;
+    border: none;
+    background-color: #31BDBA;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn:hover {
+  background: #1C1F36;
+  color: #31bdba;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #818181;
+}

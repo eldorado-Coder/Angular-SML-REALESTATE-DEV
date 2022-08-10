@@ -1,0 +1,183 @@
+<div class="main-nav">
+    <div class="sml-svg">
+        <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+        <svg width="195px" height="42px" viewBox="0 0 750 161" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>b061f6d6-1643-4212-ae93-d7156ac99cba.l</title>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" routerLink="/home">
+                <image id="b061f6d6-1643-4212-ae93-d7156ac99cba.l" x="0" y="0" width="750" height="161"
+                    xlink:href="../assets/header_img.png">
+                </image>
+            </g>
+        </svg></div>
+
+
+    <div class="nav-links">
+        <!-- lease button dropdown -->
+        <div id="lease">
+            <div class="lease text">SELL<i class="fas fa-caret-down"></i></div>
+            <div class="lease-links">
+              <div class="lease-links-all view-all">
+                <a href="#" class="text top-margin" routerLink="/realestate-list/lease">VIEW ALL</a>
+              </div>
+              <div class="lease-links-all view-all">
+                <a [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'house' }">HOUSE</a>
+              </div>
+              <div class="lease-links-all view-all">
+                <a [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'apartment' }">APARTMENT</a>
+              </div>
+              <div class="lease-links-all view-all">
+                <a [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'condo' }">CONDO</a>
+              </div>
+              <div class="lease-links-all view-all">
+                <a [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'townhomes' }">TOWNHOME</a>
+              </div>
+              <div class="lease-links-all view-all">
+                <a [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'studio' }">STUDIO</a>
+              </div>
+              <div class="lease-links-all view-all">
+                <a [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'office' }">OFFICE</a>
+              </div>
+              <div class="lease-links-all view-all">
+                <a [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'vacation' }">VACATION RENTAL</a>
+              </div>
+              <div class="lease-links-all view-all">
+                <a class="bottom-margin" [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'portable' }">MANUFACTURED HOME</a>
+              </div>
+            </div>
+
+        </div>
+        
+        <!-- ********************************** -->
+        <div class="sign">
+            <a class="sign-hover text" (click)="signOverlay()">SIGN IN / SIGN UP</a>
+        </div>
+        <!-- ********************************** -->
+        <div id="buy">
+            <button class="buy text">CART<i class="fas fa-caret-down"></i></button>
+            <div class="buy-links">
+                <div class="buy-links-all">
+                  <a href="#" class="text top-margin" routerLink="/realestate-list/sale">VIEW ALL</a>
+                </div>
+              <div class="buy-links-all">
+                <a [routerLink]="['/realestate-list/sale']" [queryParams]="{ realestatetype:'house' }">HOUSE</a>
+              </div>
+              <div class="buy-links-all">
+                <a [routerLink]="['/realestate-list/sale']" [queryParams]="{ realestatetype:'apartment' }">APARTMENT</a>
+              </div>
+              <div class="buy-links-all">
+                <a [routerLink]="['/realestate-list/sale']" [queryParams]="{ realestatetype:'condo' }">CONDO</a>
+              </div>
+              <div class="buy-links-all">
+                <a [routerLink]="['/realestate-list/sale']" [queryParams]="{ realestatetype:'townhomes' }">TOWNHOME</a>
+              </div>
+              <div class="buy-links-all">
+                <a [routerLink]="['/realestate-list/sale']" [queryParams]="{ realestatetype:'studio' }">STUDIO</a>
+              </div>
+              <div class="buy-links-all">
+                <a [routerLink]="['/realestate-list/sale']" [queryParams]="{ realestatetype:'office' }">OFFICE</a>
+              </div>
+              <div class="buy-links-all">
+                <a class="bottom-margin" [routerLink]="['/realestate-list/sale']" [queryParams]="{ realestatetype:'portable' }">MANUFACTURED HOME</a>
+              </div>
+            </div>
+        </div>
+        <div id="help">
+            <a href="#" class="list-hover text" routerLink="/">HELP</a>
+        </div>
+        <!-- <div class="list">
+            <a href="#" class="list-hover text" routerLink="/list-property">LIST A PROPERTY</a>
+        </div> -->
+        <!-- <div class="agent">
+            <a href="#" class="agent-hover text" routerLink="/agents">FIND AGENT</a>
+        </div> -->
+    </div>
+
+    <!-- overlay -->
+    <div class="overlay sign" [ngClass]="{hidden : hidden}">
+        <div class="sign-in">
+                <div class="sign-in-form" [ngClass]="{inHidden : inHidden}">
+                    <!-- <form action="" class="sign-in-input">
+                        <div class="email-pass">
+                            <input type="email" placeholder="EMAIL" id="email1">
+                            <input type="password" placeholder="PASSWORD" id="password">
+                        </div>
+                        <div class="remember">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember Me</label>
+                        </div>
+                        <input type="submit" value="SIGN IN" id="button1">
+                        <p class="forgot">Forgot your password?</p>
+                    </form> -->
+                    <span class="times-icon" (click)="hidden = !hidden">&times;</span>
+                    <div>
+                        <h1 style="text-align: 'center';">Sign In</h1>
+                        <mat-form-field appearance="outline">
+                            <mat-label>EMAIL</mat-label>
+                            <input matInput placeholder="Placeholder">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>PASSWORD</mat-label>
+                            <input matInput [type]="'password'">
+                            <button style="border: 'none';" mat-icon-button matSuffix (click)="passwordHidden = !passwordHidden" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="passwordHidden">
+                            <mat-icon>{{passwordHidden ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox">
+                        <label class="label-remember">remember me</label>
+                    </div>
+                    <div style="align-items: 'center';">
+                        <button class="btn-signin" mat-button>SIGN IN</button>
+                    </div>
+                    <div class="signin-footer">
+                        <p class="forgot-pwd">Forgot your password?</p>
+                        <div style="display: flex; justify-content: center;">
+                            <span>NEW USER &nbsp;&nbsp;</span>
+                            <a style="color: #31BDBA" (click)="inHidden = !inHidden; upHidden = !upHidden">CREATE AN ACCOUNT</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- sign up -->
+                <div class="sign-up-form" [ngClass]="{upHidden : upHidden}">
+                    <!-- <form action="" class="sign-in-input">
+                        <div class="email-pass">
+                            <input type="email" placeholder="EMAIL" id="email1">
+                            <input type="password" placeholder="PASSWORD" id="password">
+                        </div>
+                        <div class="remember">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember Me</label>
+                        </div>
+                        <input type="submit" value="SIGN IN" id="button1">
+                        <p class="forgot">Forgot your password?</p>
+                    </form> -->
+                    <span class="times-icon" (click)="hidden = !hidden">&times;</span>
+                    <div>
+                        <h1 style="text-align: 'center';">Sign Up</h1>
+                        <mat-form-field appearance="outline">
+                            <mat-label>EMAIL</mat-label>
+                            <input matInput placeholder="Placeholder">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>PASSWORD</mat-label>
+                            <input matInput [type]="'password'">
+                            <button style="border: 'none';" mat-icon-button matSuffix (click)="passwordHidden = !passwordHidden" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="passwordHidden">
+                            <mat-icon>{{passwordHidden ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div style="align-items: 'center';">
+                        <button class="btn-signin" mat-button>SIGN UP</button>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+    <div>
+        
+    </div>
+</div>

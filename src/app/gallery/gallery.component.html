@@ -1,0 +1,222 @@
+<div class="header">
+    <div class="svg-left" (click)="goBack()">
+        <div class="back">
+            <i class="arrow"></i>
+          <span style="text-transform: uppercase"> {{addressBack}}</span>
+        </div>
+
+    </div>
+
+    <div class="links">
+        <ul>
+            <li class="photo-header" style="color: #31BDBA;">PHOTOS</li>
+            <li class="street-header" (click)="checkStreetView()">STREET VIEW</li>
+            <li class="3d-header" routerLink="/three-d-view">3D VIEW</li>
+        </ul>
+
+
+    </div>
+</div>
+
+<div class="overlay" [ngClass]="{hiddenTour : hiddenTour}">
+    <div class="request-form">
+        <button (click)="closeForm()">
+            <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>close_icn</title>
+                <defs>
+                    <rect id="path-1" x="0" y="0" width="940" height="636" rx="4"></rect>
+                    <filter x="-9.2%" y="-12.2%" width="118.4%" height="128.3%" filterUnits="objectBoundingBox"
+                        id="filter-3">
+                        <feMorphology radius="3.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1">
+                        </feMorphology>
+                        <feOffset dx="0" dy="11" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                        <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1">
+                        </feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix"
+                            in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                        <feMorphology radius="4" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter2">
+                        </feMorphology>
+                        <feOffset dx="0" dy="9" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
+                        <feGaussianBlur stdDeviation="23" in="shadowOffsetOuter2" result="shadowBlurOuter2">
+                        </feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix"
+                            in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+                        <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter3">
+                        </feMorphology>
+                        <feOffset dx="0" dy="24" in="shadowSpreadOuter3" result="shadowOffsetOuter3"></feOffset>
+                        <feGaussianBlur stdDeviation="19" in="shadowOffsetOuter3" result="shadowBlurOuter3">
+                        </feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix"
+                            in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+                        <feMerge>
+                            <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                            <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                            <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="request-a-tour" transform="translate(-888.000000, -28.000000)">
+                        <g id="Dialog/1.-Title">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="☁️-Elevation">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1">
+                                </use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                        </g>
+                        <g id="Group" transform="translate(880.000000, 21.000000)" fill="#31BDBA" fill-rule="nonzero">
+                            <g id="close_icn">
+                                <path
+                                    d="M30.246926,7.55606568 C30.5762001,7.23131144 31.1112704,7.23131144 31.4405445,7.55606568 C31.7698185,7.88081992 31.7698185,8.40854556 31.4405445,8.7332998 L31.4405445,8.7332998 L20.9243544,19.1051383 L31.4405445,29.4566797 C31.7698185,29.7814339 31.7698185,30.3091596 31.4405445,30.6339138 C31.1112704,30.958668 30.5762001,30.958668 30.246926,30.6136167 L30.246926,30.6136167 L19.906,20.4135 L9.56557397,30.6136167 C9.23629992,30.958668 8.70122959,30.958668 8.37195554,30.6339138 C8.04268149,30.3091596 8.04268149,29.7814339 8.37195554,29.4566797 L18.8881456,19.1051383 L8.37195554,8.7332998 C8.04268149,8.40854556 8.04268149,7.88081992 8.37195554,7.55606568 C8.70122959,7.23131144 9.23629992,7.23131144 9.56557397,7.55606568 L19.905,17.7545 Z"
+                                    id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg></button>
+        <h3>Request a tour</h3>
+        <form action="" class="form-container">
+            <div class="left">
+                <input type="text" name="fname" id="fname" placeholder="FIRST NAME">
+                <input type="text" name="lname" id="lname" placeholder="LAST NAME">
+                <input type="text" name="email" id="email" placeholder="EMAIL">
+            </div>
+            <div class="right">
+                <select name="tour" id="tour">
+                    <option value="" disabled hidden selected>TOUR TYPE</option>
+                </select>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="MESSAGE"></textarea>
+            </div>
+        </form>
+        <input type="submit" value="SEND" class="send-btn">
+    </div>
+</div>
+
+<!-- ******************************************************************************************************************* -->
+
+<!-- ***************************************** AGENT REQUEST OVERLAY FORM ********************************************* -->
+
+<div class="overlay" [ngClass]="{hiddenAgent : hiddenAgent}">
+    <div class="request-form">
+        <button (click)="closeForm()">
+            <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>close_icn</title>
+                <defs>
+                    <rect id="path-1" x="0" y="0" width="940" height="636" rx="4"></rect>
+                    <filter x="-9.2%" y="-12.2%" width="118.4%" height="128.3%" filterUnits="objectBoundingBox"
+                        id="filter-3">
+                        <feMorphology radius="3.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1">
+                        </feMorphology>
+                        <feOffset dx="0" dy="11" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                        <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1">
+                        </feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix"
+                            in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                        <feMorphology radius="4" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter2">
+                        </feMorphology>
+                        <feOffset dx="0" dy="9" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
+                        <feGaussianBlur stdDeviation="23" in="shadowOffsetOuter2" result="shadowBlurOuter2">
+                        </feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix"
+                            in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+                        <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter3">
+                        </feMorphology>
+                        <feOffset dx="0" dy="24" in="shadowSpreadOuter3" result="shadowOffsetOuter3"></feOffset>
+                        <feGaussianBlur stdDeviation="19" in="shadowOffsetOuter3" result="shadowBlurOuter3">
+                        </feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix"
+                            in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+                        <feMerge>
+                            <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                            <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                            <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="request-a-tour" transform="translate(-888.000000, -28.000000)">
+                        <g id="Dialog/1.-Title">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="☁️-Elevation">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1">
+                                </use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                        </g>
+                        <g id="Group" transform="translate(880.000000, 21.000000)" fill="#31BDBA" fill-rule="nonzero">
+                            <g id="close_icn">
+                                <path
+                                    d="M30.246926,7.55606568 C30.5762001,7.23131144 31.1112704,7.23131144 31.4405445,7.55606568 C31.7698185,7.88081992 31.7698185,8.40854556 31.4405445,8.7332998 L31.4405445,8.7332998 L20.9243544,19.1051383 L31.4405445,29.4566797 C31.7698185,29.7814339 31.7698185,30.3091596 31.4405445,30.6339138 C31.1112704,30.958668 30.5762001,30.958668 30.246926,30.6136167 L30.246926,30.6136167 L19.906,20.4135 L9.56557397,30.6136167 C9.23629992,30.958668 8.70122959,30.958668 8.37195554,30.6339138 C8.04268149,30.3091596 8.04268149,29.7814339 8.37195554,29.4566797 L18.8881456,19.1051383 L8.37195554,8.7332998 C8.04268149,8.40854556 8.04268149,7.88081992 8.37195554,7.55606568 C8.70122959,7.23131144 9.23629992,7.23131144 9.56557397,7.55606568 L19.905,17.7545 Z"
+                                    id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg></button>
+        <h3>Contact agent</h3>
+        <form action="" class="form-container">
+            <div class="left">
+                <input type="text" name="fname" id="fname" placeholder="FIRST NAME">
+                <input type="text" name="lname" id="lname" placeholder="LAST NAME">
+                <input type="text" name="email" id="email" placeholder="EMAIL">
+            </div>
+            <div class="right">
+                <select name="tour" id="tour">
+                    <option value="" disabled hidden selected>TOUR TYPE</option>
+                </select>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="MESSAGE"></textarea>
+            </div>
+        </form>
+        <input type="submit" value="SEND" class="send-btn">
+    </div>
+</div>
+
+<div (click)="scrollUp()" class="arrow-up-container" id="arrow-up-container">
+  <img *ngIf="showArrow" class="up-resting" src="../../assets/icons/up_resting.png">
+  <img *ngIf="showArrow" class="up-hover" src="../../assets/icons/up_hover.png">
+</div>
+
+<div *ngIf="showImages" id="overlay" (click)="closeOverlay()" [ngClass]="{hidden : hidden}">
+  <div class="modal-content">
+    <div class="slides" *ngFor="let slide of galleryImagesPreview">
+      <img src="{{slide.href}}">
+    </div>
+  </div>
+
+  <span class="close cursor" (click)="closeOverlay()"><img src="../../assets/icons/close_icon.png"></span>
+  <a class="prev" (click)="plusSlides(-1, $event)"><img src="../../assets/icons/left.png"></a>
+  <a class="next" (click)="plusSlides(1, $event)"><img src="../../assets/icons/right.png"></a>
+</div>
+
+<div *ngIf="showImages">
+  <div id="gallery-page-gallery" class="gallery-page-gallery">
+    <div *ngFor="let img of galleryImages; let index = index">
+      <div (click)="setCurrentSlide(index)" class="img" [style.background-image]="'url('+ img.href +')'"></div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!showImages" class="no-images-container">
+  <h1 class="no-images">Sorry, Photos not Available</h1>
+  <p class="no-images">Start My Lease® is currently unable to display photos of this property. We recommend that you contact the agent or request a tour.</p>
+</div>
+
+<div class="sml-svg" [ngClass]="{'no-images': !showImages}">
+    <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+    <img src="../assets/empty_carousel.png" width="220px"/>
+</div>
+
+
+<div class="contact-footer">
+    <button class="agent btn" (click)="agentOverlay()">CONTACT AGENT</button>
+    <button class="tour btn" (click)="tourOverlay()">REQUEST TOUR</button>
+</div>

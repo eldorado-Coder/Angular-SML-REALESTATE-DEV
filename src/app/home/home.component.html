@@ -1,0 +1,274 @@
+<app-nav></app-nav>
+<app-header1></app-header1>
+<div class="welcome">
+
+  <!-- STIE-NAV -->
+  <div class="site-nav">
+    <div id="site-nav-pophover">
+      <div class="text">HOME TYPE<i class="fas fa-caret-down"></i></div>
+      <div class="site-nav-pophover-links">
+          <a href="">1</a>
+          <a href="">2</a>
+      </div>
+    </div>
+    <div id="site-nav-pophover">
+      <div class="site-nav-pophover text">PRICE<i class="fas fa-caret-down"></i></div>
+      <div class="site-nav-pophover-links">
+          <a href="">1</a>
+          <a href="">2</a>
+      </div>
+    </div>
+    
+    <div id="site-nav-pophover">
+      <div class="site-nav-pophover text">BEDS<i class="fas fa-caret-down"></i></div>
+      <div class="site-nav-pophover-links">
+          <a href="">1</a>
+          <a href="">2</a>
+      </div>
+    </div>
+    
+    <div id="site-nav-pophover">
+      <div class="site-nav-pophover text">BATHS<i class="fas fa-caret-down"></i></div>
+      <div class="site-nav-pophover-links">
+          <a href="">1</a>
+          <a href="">2</a>
+      </div>
+    </div>
+    
+    <div id="site-nav-pophover">
+      <div class="site-nav-pophover text">MORE FILTERS</div>
+      <div class="site-nav-pophover-links">
+          <a href="">1</a>
+          <a href="">2</a>
+      </div>
+    </div>
+  </div>
+
+   <!-- <div class="site-nav">
+       <div class="home">
+           <H3>HOME</H3>
+           <hr class="title-hr">
+           <ul>
+
+               <li routerLink="/realestate-list/lease">VIEW ALL</li>
+               <li [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'house' }">HOUSE</li>
+               <li [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'apartment' }">APARTMENT</li>
+               <li [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'condo' }">CONDO</li>
+               <li [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'townhomes' }">TOWNHOUSE</li>
+               <li [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'studio' }">STUDIO</li>
+               <li [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'office' }">OFFICE</li>
+              <li [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'vacation' }">VACATION RENTAL</li>
+               <li [routerLink]="['/realestate-list/lease']" [queryParams]="{ realestatetype:'portable' }">PORTABLE CONTRUCTION</li>
+           </ul>
+       </div> -->
+<!--        <div class="auto">-->
+  <!--            <hr class="title-hr">-->
+  <!--            <h3>AUTO</h3>-->
+<!--            <ul>-->
+<!--                <li routerLink="/realestate-list">VIEW ALL</li>-->
+
+<!--                <li routerLink="/realestate-list">SUV</li>-->
+
+<!--                <li routerLink="/realestate-list">TRUCK</li>-->
+
+<!--                <li routerLink="/realestate-list">SEDAN</li>-->
+
+<!--                <li routerLink="/realestate-list">COUPE</li>-->
+
+<!--                <li routerLink="/realestate-list">WAGON</li>-->
+
+<!--                <li routerLink="/realestate-list">CONVERTABLE</li>-->
+
+<!--                <li routerLink="/realestate-list">SPORT</li>-->
+
+<!--                <li routerLink="/realestate-list">CROSSOVER</li>-->
+
+<!--                <li routerLink="/realestate-list">LUXURY</li>-->
+
+<!--                <li routerLink="/realestate-list">HYBRID</li>-->
+
+<!--                <li routerLink="/realestate-list">ELECTRIC</li>-->
+
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="furniture">-->
+<!--            <h3>FURNITURE</h3>-->
+<!--            <hr class="title-hr">-->
+<!--            <ul>-->
+<!--                <li routerLink="/realestate-list">VIEW ALL</li>-->
+
+<!--                <li routerLink="/realestate-list">COUCH</li>-->
+
+<!--                <li routerLink="/realestate-list">TABLE</li>-->
+
+<!--                <li routerLink="/realestate-list">CHAIR</li>-->
+
+<!--                <li routerLink="/realestate-list">CHANDELIER</li>-->
+
+<!--                <li routerLink="/realestate-list">MIRRORS</li>-->
+
+<!--                <li routerLink="/realestate-list">DEB</li>-->
+
+<!--                <li routerLink="/realestate-list">BOOKCASE</li>-->
+
+<!--                <li routerLink="/realestate-list">DESK</li>-->
+
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="help">-->
+<!--            <h3>HELP CENTER</h3>-->
+<!--            <hr class="title-hr">-->
+<!--            <ul>-->
+<!--                <li routerLink="/realestate-list">FREQUENTLY ASKED QUESTIONS</li>-->
+
+<!--                <li routerLink="/realestate-list">LOG IN / LOG OUT</li>-->
+
+<!--                <li routerLink="/realestate-list">SIGN UP</li>-->
+
+<!--                <li routerLink="/realestate-list">ACCOUNT</li>-->
+
+<!--                <li routerLink="/realestate-list">PASSWORD</li>-->
+
+<!--            </ul>-->
+<!--        </div> -->
+<!--    </div> -->
+
+
+    <!-- HOUSES FOR SALE -->
+    <div class="house-for-sale">
+      <p class="text">HOUSES FOR LEASE</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let carousel of carouselData">
+            <div class="card-header d-flex justify-content-between">
+              <!-- <img src="assets/icons/icon-tmp.png"/> -->
+              <div>
+                <p class="price">$15000</p>
+                <a class="address" target="_blank" href="https://www.google.com/maps/place/32983+Cedar+Ridge+Ct,+Warren,+MI+48093/@42.5544618,-83.0746261,12.25z/data=!4m5!3m4!1s0x8824dbcdab3fee0b:0x2795c237312a54c2!8m2!3d42.5362139!4d-83.0067746?hl=en&authuser=0">32983 Cedar Ridge Ct #10 Warren, MI 48093</a>
+              </div>
+            </div>
+            <div>
+              <img [src]="carousel?.imgSrc" width="100%"/>
+            </div>
+            <p>asdfasdfasfd asdfhashdfkjha aksjdfh kasjhdf  asdfasfd</p>
+            <div class="card-footer d-flex jsutify-content-between">
+              <span style="color: #31BDBA">MORE DETAILS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <!-- EXPLORE WHATS IN YOUR AREA -->
+
+    <div class="explore">
+        <div class="max-width">
+            <div class="title-btn">
+                <h3 class="in-area">Explore what's in your area</h3>
+                <button class="explore-btn">EXPLORE</button>
+            </div>
+            <div class="pics-details">
+                <div class="home-page-carousel">
+                  <div id="home-carousel" class="owl-carousel owl-theme"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- find a representative -->
+    <div class="agent-content">
+        <div class="agent-info">
+          <div class="agent-pic"></div>
+          <div class="contact-form-container">
+            <div class="contact-form">
+              <div class="agent-about">
+                <h3>Get information on the Start My Lease®<br> program in your area</h3>
+                <p>Let one of our local experts guide you in the process of listing or leasing your next home.</p>
+              </div>
+              <form action="" class="agent-form">
+                <div class="name-input">
+                  <!-- <label for="name"></label> -->
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>FIRST NAME</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>LAST NAME</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>EMAIL</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                </div>
+
+                <div class="name-input">
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>WHERE ARE YOU LOOKING FOR HOMES?</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width message-input" appearance="outline">
+                    <mat-label>MESSAGE</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </form>
+              <input type="submit" class="submit-btn" value="SEND">
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- why choose us -->
+
+    <div class="choose-us">
+        <h3 class="sml-test">Why choose us?</h3>
+        <div class="title-lorem-pic">
+            <div class="div1">
+                <div class="lorem">
+                    <h5>LEASE PROPERTY EASIER THAN</h5>
+                    <h5>EVER BEFORE</h5>
+                    <hr class="right-hr">
+                    <br>
+                    <p>Can't put down a large sum of money?</p>
+                    <br>
+                    <p>Well, no worries. We promote lease-to-own and rental arrangements so you can keep more cash on you. We also speed up the process so you can lease, own or rent quickly, easily and more affordably.</p>
+                </div>
+                <div class="choose-us-1"></div>
+            </div>
+        </div>
+
+        <div class="title-lorem-pic">
+            <div class="div2">
+                <div class="lorem">
+                  <h5>LEASE-UP PROPERTY EASIER</h5>
+                  <h5>THAN EVER BEFORE</h5>
+                  <hr class="right-hr">
+                  <br>
+                  <p>Tired of vetting prospective tenants?</p>
+                  <br>
+                  <p>We just made the process a whole lot easier for you to manage. We can take care of the background checks, tenant verifications and zero-contact document processing.Go seamless, and stay safe!</p>
+                </div>
+                <div class="choose-us-2"></div>
+            </div>
+        </div>
+
+      <div class="title-lorem-pic">
+        <div class="div3">
+          <div class="lorem">
+            <h5>FIND EXACTLY WHAT YOU'RE</h5>
+            <h5>LOOKING FOR</h5>
+            <hr class="right-hr">
+            <br>
+            <p>Our advanced search filters help you find your dream home, buy that perfect coffee table, lease-to-own that lawn mower you've been eyeing, or buy and lease anything else that you desire.</p>
+          </div>
+          <div class="choose-us-3"></div>
+        </div>
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>

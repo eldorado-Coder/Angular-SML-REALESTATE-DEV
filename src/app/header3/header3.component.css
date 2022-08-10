@@ -1,0 +1,448 @@
+.header-container {
+    width: 100vw;
+    /* height: 474px; */
+    position: relative;
+}
+
+.background-image{
+    width: 100vw;
+    height: 100%;
+    background-image: url(src/assets/pexels-fauxels-3184183.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -3;
+    position: absolute;
+}
+
+.background-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    /* z-index: 8; */
+}
+
+.search-form {
+    padding-top: 198px;
+    padding-bottom: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    max-width: 1108px;
+    margin: auto;
+}
+
+.search-bar {
+  width: 1109px;
+  height: 55px;
+  border: none;
+  padding-left: 35px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #505050;
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.submit-btn {
+  height: 55px;
+  width: 168px;
+  border: none;
+  background: #31BDBA;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1C1F36;
+  color: #31bdba;
+}
+
+.submit-btn:focus {
+  outline: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 13px;
+}
+
+/*********** CHECKBOXES ***********/
+
+.checkbox-test {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-test label {
+    cursor: pointer;
+    display: flex;
+    color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+
+}
+
+.checkbox-test input[type="checkbox"] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-test label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: .05em solid white;
+  border-radius: 0.15em;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+.checkbox-test input[type="checkbox"]:hover + label::before {
+  background-image: url(src/assets/checked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.checkbox-test input[type="checkbox"]:checked:hover + label::before {
+  background-image: url(src/assets/unchecked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.checkbox-test input[type="checkbox"]:checked + label::before {
+  background-image: url(src/assets/checked.png);
+  background-color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+  /* **************************************************** */
+
+
+
+  .lease, .buy {
+      margin-right: 10px;
+  }
+
+
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1108px;
+    margin: auto;
+    padding-bottom: 66px;
+}
+
+.padding {
+    margin-right: 113px;
+}
+
+/* more filters */
+.more-filters {
+    width: 100vw;
+    background-color: #1C1F36;
+}
+
+.basic-filter {
+    height: 100%;
+    padding: 0 120px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basic-filter-center {
+  justify-content: center;
+}
+
+#home-type, #price, #beds {
+    padding: 19px 34px 17px 34px;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
+
+#leaseDrop {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    padding: 19px 0 17px 34px;
+}
+
+#baths {
+    padding: 19px 20px 17px 34px;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
+
+#sqf {
+    padding: 19px 34px 17px 20px;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
+
+.filter-ex {
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    color: #31BDBA;
+    cursor: pointer;
+}
+
+
+.disBtn {
+    display: none;
+}
+
+
+.top {
+    padding: 19px 0 17px 34px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: -24px;
+}
+
+.absolute {
+    position: relative;
+}
+
+.hiddenFilters {
+    background-color: #1C1F36;
+    color: #ffffff;
+    font-size: 16px;
+    padding-right: 120px;
+    padding-left: 120px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.filter-dropdown {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.hfd {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.hfd.sqf {
+  width: 20%;
+}
+
+.filter-row {
+    display: flex;
+    margin-right: 10px;
+    padding: 10px 20px 30px 0;
+}
+
+.extended-filters {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+#homeType,
+#price,
+#beds,
+#baths {
+  width: 15%;
+  padding: 17px 0;
+}
+
+#sqf,
+#leaseDrop {
+  width: 20%;
+  padding: 17px 0;
+}
+
+#community-center {
+    padding-right: 15px;
+}
+
+.svg-up-arrow {
+    right: 90px;
+    top: 579px;
+    position: absolute;
+}
+
+.svg-up-arrow .up-hover {
+  display: none;
+}
+
+.svg-up-arrow:hover .up-hover {
+  display: block;
+}
+
+.svg-up-arrow:hover .up-resting {
+  display: none;
+}
+
+.hiddenFilt {
+  width: 200px !important;
+}
+
+.hiddenDrops {
+    display: none !important;
+}
+
+#sqf-lease {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* extended checkbox filters workthrough */
+
+.filter-row label {
+    cursor: pointer;
+    display: flex;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.filter-row input[type="checkbox"] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.filter-row label::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    border: .03em solid white;
+    border-radius: 0.15em;
+    margin-right: 10px;
+}
+
+.filter-row label:hover::before,
+.filter-row input[type="checkbox"]:hover + label::before {
+    background-color: #31BDBA;
+}
+
+.filter-row input[type="checkbox"]:checked + label::before {
+    background-image: url(src/assets/checked.png);
+    background-color: white;
+    border: 1px solid #ffffff;
+}
+
+/* ************************************************* */
+
+.country, .usa, .canada, .city, .homeType, .price,
+.beds, .baths, .sqf, .leaseDrop {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    display: flex;
+  }
+
+  #country, #usa, #canada, #city {
+      margin-right: 106px;
+      cursor: pointer;
+  }
+
+  .country:hover,
+  .usa:hover,
+  .canada:hover,
+  .city:hover {
+    color: #31bdba!important;
+  }
+
+  .zip {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .fa-caret-down {
+      padding-left: 10px;
+  }
+
+  .country-links, .usa-links, .city-links, .zip-links,
+  .homeType-links, .price-links, .beds-links, .baths-links,
+  .sqf-links, .leaseDrop-links {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    opacity: 100%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    margin-top: 1px;
+    border-radius: 5px;
+  }
+
+  .country-links a, .usa-links a, .canada-links a,
+  .city-links a, .zip-links a, .homeType-links a, .price-links input,
+  .beds-links a, .baths-links a, .sqf-links a, .leaseDrop-links a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .country-links a:hover, .usa-links a:hover, .canada-links a:hover,
+    .city-links a:hover, .zip-links a:hover, .homeType-links a:hover,
+    .price-links a:hover, .beds-links a:hover, .baths-links a:hover,
+    .sqf-links a:hover, .leaseDrop-links a:hover
+     {background-color: #31BDBA}
+
+  #country:hover .country-links, #usa:hover .usa-links,
+    #canada:hover .canada-links, #city:hover .city-links,
+    #zip:hover .zip-links, #homeType:hover .homeType-links,
+    #beds:hover .beds-links, #baths:hover .baths-links,
+    #price:hover .price-links, #sqf:hover .sqf-links,
+    #leaseDrop:hover .leaseDrop-links {display: block;}
+
+
+

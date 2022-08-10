@@ -1,0 +1,504 @@
+<app-nav></app-nav>
+<div class="detail-content">
+
+    <!-- ******************************************** REQUEST TOUR OVERLAY ************************************************ -->
+
+    <div class="overlay hidden" [ngClass]="{hidden : hidden}">
+        <div class="request-form">
+            <button (click)="closeForm()">
+                <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>close_icn</title>
+                    <defs>
+                        <rect id="path-1" x="0" y="0" width="940" height="636" rx="4"></rect>
+                        <filter x="-9.2%" y="-12.2%" width="118.4%" height="128.3%" filterUnits="objectBoundingBox"
+                            id="filter-3">
+                            <feMorphology radius="3.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1">
+                            </feMorphology>
+                            <feOffset dx="0" dy="11" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1">
+                            </feGaussianBlur>
+                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix"
+                                in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                            <feMorphology radius="4" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter2">
+                            </feMorphology>
+                            <feOffset dx="0" dy="9" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
+                            <feGaussianBlur stdDeviation="23" in="shadowOffsetOuter2" result="shadowBlurOuter2">
+                            </feGaussianBlur>
+                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix"
+                                in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+                            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter3">
+                            </feMorphology>
+                            <feOffset dx="0" dy="24" in="shadowSpreadOuter3" result="shadowOffsetOuter3"></feOffset>
+                            <feGaussianBlur stdDeviation="19" in="shadowOffsetOuter3" result="shadowBlurOuter3">
+                            </feGaussianBlur>
+                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix"
+                                in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+                            <feMerge>
+                                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="request-a-tour" transform="translate(-888.000000, -28.000000)">
+                            <g id="Dialog/1.-Title">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="☁️-Elevation">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1">
+                                    </use>
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                </g>
+                            </g>
+                            <g id="Group" transform="translate(880.000000, 21.000000)" fill="#31BDBA"
+                                fill-rule="nonzero">
+                                <g id="close_icn">
+                                    <path
+                                        d="M30.246926,7.55606568 C30.5762001,7.23131144 31.1112704,7.23131144 31.4405445,7.55606568 C31.7698185,7.88081992 31.7698185,8.40854556 31.4405445,8.7332998 L31.4405445,8.7332998 L20.9243544,19.1051383 L31.4405445,29.4566797 C31.7698185,29.7814339 31.7698185,30.3091596 31.4405445,30.6339138 C31.1112704,30.958668 30.5762001,30.958668 30.246926,30.6136167 L30.246926,30.6136167 L19.906,20.4135 L9.56557397,30.6136167 C9.23629992,30.958668 8.70122959,30.958668 8.37195554,30.6339138 C8.04268149,30.3091596 8.04268149,29.7814339 8.37195554,29.4566797 L18.8881456,19.1051383 L8.37195554,8.7332998 C8.04268149,8.40854556 8.04268149,7.88081992 8.37195554,7.55606568 C8.70122959,7.23131144 9.23629992,7.23131144 9.56557397,7.55606568 L19.905,17.7545 Z"
+                                        id="Combined-Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg></button>
+            <h3>Request a tour</h3>
+            <div class="welcome">
+              <form action="" class="agent-form">
+                <div class="name-input">
+                  <!-- <label for="name"></label> -->
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>FIRST NAME</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>LAST NAME</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>EMAIL</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                </div>
+
+                <div class="name-input">
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>TOUR TYPE</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width message-input" appearance="outline">
+                    <mat-label>MESSAGE</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </form>
+            </div>
+            <input type="submit" value="SEND" class="send-btn">
+        </div>
+    </div>
+
+    <!-- ******************************************************************************************************************* -->
+
+    <!-- ***************************************** AGENT REQUEST OVERLAY FORM ********************************************* -->
+
+    <div class="overlay" [ngClass]="{hiddenAgent : hiddenAgent}">
+        <div class="request-form">
+            <button class="close-icon-container" (click)="closeForm()">
+              <img class="close-icon" style="width: 35px" src="../../assets/icons/close_icn_navy_blue.png"/>
+              <img class="close-icon-hover" style="width: 35px" src="../../assets/icons/close_icn_navy_hover.png"/>
+            </button>
+            <h3>Contact agent</h3>
+            <div class="welcome">
+              <form action="" class="agent-form">
+                <div class="name-input">
+                  <!-- <label for="name"></label> -->
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>FIRST NAME</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>LAST NAME</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>EMAIL</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                </div>
+
+                <div class="name-input">
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>TOUR TYPE</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width message-input" appearance="outline">
+                    <mat-label>MESSAGE</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </form>
+            </div>
+            <input type="submit" value="SEND" class="send-btn">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="btn view-all" (click)="navigateToGallery()">VIEW ALL PHOTOS</button>
+        <button class="btn contact" (click)="agentOverlay()">CONTACT AGENT</button>
+        <button class="btn tour" (click)="tourOverlay()">REQUEST A TOUR</button>
+    </div>
+    <div class="main-details">
+        <div class="details-page-carousel">
+          <div id="sync1" class="owl-carousel owl-theme big-carousel"></div>
+          <div id="sync2" class="owl-carousel owl-theme small-carousel"></div>
+          <div id="noImage"></div>
+        </div>
+        <div class="description" *ngIf="details">
+            <p class="title">{{details.realEstateTypeName}} FOR {{details.adTypeName}}</p>
+            <div class="availability">
+              <!-- calendar svg -->
+              <div class="cal-div">
+                <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+                <svg width="15px" height="17px" viewBox="0 0 15 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <title>Shape</title>
+                  <defs>
+                    <path
+                      d="M5,-1.13686838e-13 L351,-1.13686838e-13 C353.761424,-1.14194103e-13 356,2.23857625 356,5 L356,405 C356,407.761424 353.761424,410 351,410 L5,410 C2.23857625,410 3.38176876e-16,407.761424 0,405 L0,5 C-3.38176876e-16,2.23857625 2.23857625,-1.13179572e-13 5,-1.13686838e-13 Z"
+                      id="path-1"></path>
+                    <filter x="-7.0%" y="-4.9%" width="114.0%" height="112.2%" filterUnits="objectBoundingBox"
+                            id="filter-2">
+                      <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                      <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1">
+                      </feGaussianBlur>
+                      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix"
+                                     in="shadowBlurOuter1"></feColorMatrix>
+                    </filter>
+                  </defs>
+                  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="body" transform="translate(-177.000000, -572.000000)">
+                      <g id="card-Copy-12" transform="translate(165.000000, 195.000000)">
+                        <g id="Combined-Shape">
+                          <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1">
+                          </use>
+                          <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <g id="Group-6-Copy-2" transform="translate(12.033803, 377.000000)" fill="#5C5F64">
+                          <path
+                            d="M4.67981221,7.65 L3.1198748,7.65 L3.1198748,9.35 L4.67981221,9.35 L4.67981221,7.65 Z M7.79968701,7.65 L6.23974961,7.65 L6.23974961,9.35 L7.79968701,9.35 L7.79968701,7.65 Z M10.9195618,7.65 L9.35962441,7.65 L9.35962441,9.35 L10.9195618,9.35 L10.9195618,7.65 Z M12.4794992,1.7 L11.6995305,1.7 L11.6995305,0 L10.1395931,0 L10.1395931,1.7 L3.89984351,1.7 L3.89984351,0 L2.3399061,0 L2.3399061,1.7 L1.5599374,1.7 C0.694172144,1.7 0.00779968701,2.465 0.00779968701,3.4 L0,15.3 C0,16.235 0.694172144,17 1.5599374,17 L12.4794992,17 C13.3374648,17 14.0394366,16.235 14.0394366,15.3 L14.0394366,3.4 C14.0394366,2.465 13.3374648,1.7 12.4794992,1.7 Z M12.4794992,15.3 L1.5599374,15.3 L1.5599374,5.95 L12.4794992,5.95 L12.4794992,15.3 Z"
+                            id="Shape"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              {{commonService.checkAvailableDate(details.availabilityDate)}}
+            </div>
+            <h4 *ngIf="details.addressLine2" class="address">{{details.address.addressLine1}}, {{details.address.addressLine2}}, {{details.address.cityName}}, {{details.address.stateCode}} {{details.address.mailCode}}</h4>
+          <h4 *ngIf="!details.addressLine2" class="address">{{details.address.addressLine1}}, {{details.address.cityName}}, {{details.address.stateCode}} {{details.address.mailCode}}</h4>
+            <hr>
+          <h6 class="price"><span class="money">${{details.price}}</span> <span style="text-transform: uppercase" *ngIf="details.paymentFrequency">/ {{details.paymentFrequency}}</span></h6>
+            <p class="more">
+              {{details.description}}
+            </p>
+        </div>
+    </div>
+
+    <!--****************************** DETAILS ******************************-->
+    <div class="extended-detail-container">
+
+        <div class="extended-details" *ngIf="details">
+            <div class="tab" [ngStyle]="{'justify-content': (details.adTypeName !== 'sale' || (details.leaseTerms && details.leaseTerms.length)) ? 'space-between' : 'unset' }">
+                <div [ngStyle]="{'margin-right': (details.adTypeName !== 'sale' || (details.leaseTerms && details.leaseTerms.length)) ? '0' : '10px' }" class="tablinks active" onclick="openTab(event, 'included')"><button>WHAT'S INCLUDED</button></div>
+                <div *ngIf="details.adTypeName !== 'sale' || (details.leaseTerms && details.leaseTerms.length)" class="tablinks" onclick="openTab(event, 'leaseTerms')"><button>LEASE TERMS</button></div>
+                <div class="tablinks" onclick="openTab(event, 'gettingAround')"><button>GETTING AROUND</button></div>
+            </div>
+
+            <div id="included" class="tabcontent">
+                <div class="included-left">
+                    <div class="furniture-left" *ngIf="details">
+                        <p id="noFurniture" *ngIf="!details.furnished">THIS PROPERTY DOES NOT INCLUDE FURNITURE</p>
+                        <p id="noFurniture" *ngIf="details.furnished">THIS PROPERTY IS FULLY FURNISHED. FOR DETAILS CONTACT THE AGENT</p>
+                        <div class="furniture-svg">
+                            <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+                            <svg width="31px" height="41px" viewBox="0 0 31 41" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>sml icon</title>
+                                <defs>
+                                    <path
+                                        d="M165,941 C165,938.238576 167.238576,936 170,936 L328,936 C330.761424,936 333,938.238576 333,941 L333,991 L704,991 C706.761424,991 709,993.238576 709,996 L709,1326 C709,1328.76142 706.761424,1331 704,1331 L170,1331 C167.238576,1331 165,1328.76142 165,1326 L165,941 Z"
+                                        id="path-1"></path>
+                                    <filter x="-4.9%" y="-5.4%" width="109.7%" height="113.4%"
+                                        filterUnits="objectBoundingBox" id="filter-2">
+                                        <feMorphology radius="0.5" operator="dilate" in="SourceAlpha"
+                                            result="shadowSpreadOuter1"></feMorphology>
+                                        <feOffset dx="0" dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1">
+                                        </feOffset>
+                                        <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1"
+                                            result="shadowBlurOuter1"></feGaussianBlur>
+                                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.07 0"
+                                            type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                                    </filter>
+                                    <linearGradient x1="40.3894878%" y1="-20.0840841%" x2="66.7076449%" y2="172.072072%"
+                                        id="linearGradient-3">
+                                        <stop stop-color="#31BDBA" offset="19%"></stop>
+                                        <stop stop-color="#118FB0" offset="46%"></stop>
+                                        <stop stop-color="#0077AA" offset="64%"></stop>
+                                        <stop stop-color="#133459" offset="100%"></stop>
+                                    </linearGradient>
+                                    <linearGradient x1="44.7772408%" y1="13.692%" x2="56.0079757%" y2="84.4378378%"
+                                        id="linearGradient-4">
+                                        <stop stop-color="#31BDBA" offset="0%"></stop>
+                                        <stop stop-color="#118FB0" offset="46%"></stop>
+                                        <stop stop-color="#0077AA" offset="64%"></stop>
+                                        <stop stop-color="#133459" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <g id="Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Details-no-furniture" transform="translate(-276.000000, -1110.000000)">
+                                        <g id="Combined-Shape-Copy">
+                                            <use fill="black" fill-opacity="1" filter="url(#filter-2)"
+                                                xlink:href="#path-1"></use>
+                                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                        </g>
+                                        <g id="Group" transform="translate(174.000000, 1011.000000)">
+                                            <rect id="Rectangle" fill="#F8F8F8" x="0" y="0" width="234" height="300"
+                                                rx="5"></rect>
+                                            <g transform="translate(102.000000, 99.000000)" fill-rule="nonzero"
+                                                id="sml-icon">
+                                                <g id="brand_full_color_h">
+                                                    <path
+                                                        d="M21.0261677,4.32568807 L21.0261677,11.4010092 C23.3570574,13.227084 24.6419883,16.1057725 24.4560182,19.0850574 C24.2700481,22.0643423 22.6374051,24.7560843 20.098024,26.2700917 L20.098024,26.2700917 C18.6348621,27.1070658 17.4347987,28.3457515 16.6360479,29.8434862 L16.6360479,29.8434862 C16.4484593,30.2605502 16.0377599,30.5282046 15.5853892,30.5282046 C15.1330185,30.5282046 14.7223191,30.2605502 14.5347305,29.8434862 L14.5347305,29.8434862 C14.6479641,30.0578899 14.7482036,30.2816972 14.8447305,30.5073853 C15.1748083,31.2830417 15.3935942,32.1025772 15.4944311,32.941055 C15.539969,33.3154353 15.5629058,33.692283 15.5631138,34.0694954 C15.5653316,35.8600665 15.0384202,37.6103102 14.0502395,39.0948165 L14.0353892,39.1136239 C14.221018,39.4897706 14.3806587,39.8659174 14.5365868,40.2665138 L14.5365868,40.2665138 C14.7230241,40.6849455 15.1341209,40.9539045 15.5872455,40.9539045 C16.0403701,40.9539045 16.4514669,40.6849455 16.6379042,40.2665138 L16.6379042,40.2665138 C17.921236,36.9575013 20.2780257,34.1896111 23.3205389,32.418211 L23.3001198,32.4351376 C28.4483347,29.4140078 31.4197009,23.6597225 30.9337058,17.6520955 C30.4477106,11.6444684 26.5912107,6.45717686 21.0261677,4.32568807 Z"
+                                                        id="Path" fill="#1C1F36"></path>
+                                                    <path
+                                                        d="M15.5928144,0 C13.9425749,0 12.6041916,1.28454128 12.6041916,2.87 L12.6041916,12.7889908 C12.6041916,14.3725688 13.9425749,15.6571101 15.5928144,15.6571101 C17.2430539,15.6571101 18.574012,14.378211 18.574012,12.7889908 L18.574012,2.87 C18.574012,1.28454128 17.2356287,0 15.5928144,0 Z"
+                                                        id="Path" fill="url(#linearGradient-3)"></path>
+                                                    <path
+                                                        d="M14.5291617,29.8472477 C13.7296623,28.3494421 12.5289901,27.1107922 11.0653293,26.2738532 L11.0653293,26.2738532 C8.53133013,24.7582949 6.90284443,22.0694058 6.71697743,19.0940323 C6.53111044,16.1186587 7.81200036,13.2432069 10.1371856,11.416055 L10.1371856,4.32568807 C4.57202482,6.45836324 0.716287972,11.6470485 0.231858717,17.6553383 C-0.252570539,23.6636281 2.72090048,29.4175289 7.87065868,32.4370183 L7.8391018,32.4200917 C10.5196083,33.9723348 12.6762993,36.306859 14.0279641,39.1192661 L14.0428144,39.1004587 C15.8696997,36.3417857 16.0557391,32.7900952 14.5273054,29.8510092 L14.5291617,29.8472477 Z"
+                                                        id="Path" fill="url(#linearGradient-4)"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <p id="leaseFurniture" *ngIf="!details.furnished">NO PROBLEM!<br> YOU CAN LEASE TO OWN EASIER WITH US!</p>
+                      <p id="leaseFurniture" *ngIf="details.furnished">LEASE TO OWN EASIER WITH US!</p>
+                        <button class="view-furniture">VIEW FURNITURE</button>
+                    </div>
+                </div>
+                <!-- scroll -->
+                <div class="included-right" *ngIf="details">
+                    <div class="ammenities-right amen-title">
+                        <p>Square feet:</p>
+                        <p *ngIf="details.adTypeName === 'sale'">Lot size:</p>
+                        <p *ngIf="details.adTypeName === 'sale'">Year built:</p>
+                        <p>Beds:</p>
+                        <p>Baths:</p>
+                        <p>Parking:</p>
+                        <p>Air conditioner:</p>
+                        <p>Heat:</p>
+                        <p>Washer / Dryer:</p>
+                        <p>Accessibility:</p>
+                        <p>Storage:</p>
+                        <p>Pet friendly:</p>
+                        <p>Community center:</p>
+                        <p>Pool:</p>
+                        <p *ngIf="details.adTypeName === 'lease'">Furnished:</p>
+                        <p *ngIf="details.adTypeName === 'lease'">Gym:</p>
+                        <p *ngIf="details.adTypeName === 'sale'">Basement:</p>
+                    </div>
+                    <div class="ammenities-right amen-value">
+                        <p>{{details.squareFeet}}</p>
+                        <p *ngIf="details.adTypeName === 'sale'">{{details.lotSize}} sqft</p>
+                        <p *ngIf="details.adTypeName === 'sale'">{{details.yearBuilt}}</p>
+                        <p *ngIf="details.roomCount">{{details.roomCount}}</p>
+                        <p *ngIf="!details.roomCount">No data</p>
+                        <p *ngIf="details.bathroomCount">{{details.bathroomCount}}</p>
+                        <p *ngIf="!details.bathroomCount">No data</p>
+                        <p *ngIf="details.parking">Yes</p>
+                        <p *ngIf="!details.parking">No</p>
+                        <p *ngIf="details.airconditioner">Yes</p>
+                        <p *ngIf="!details.airconditioner">No</p>
+                        <p *ngIf="details.furnaceorheating">Yes</p>
+                        <p *ngIf="!details.furnaceorheating">No</p>
+                        <p *ngIf="details.washerdryerinunit">Yes</p>
+                        <p *ngIf="!details.washerdryerinunit">No</p>
+                        <p *ngIf="details.accessibility">Yes</p>
+                        <p *ngIf="!details.accessibility">No</p>
+                        <p *ngIf="details.storage">Yes</p>
+                        <p *ngIf="!details.storage">No</p>
+                        <p *ngIf="details.petfriendly">Yes</p>
+                        <p *ngIf="!details.petfriendly">No</p>
+                        <p *ngIf="details.communitycenter">Yes</p>
+                        <p *ngIf="!details.communitycenter">No</p>
+                        <p *ngIf="details.pool">Yes</p>
+                        <p *ngIf="!details.pool">No</p>
+                        <p *ngIf="details.furnished && details.adTypeName === 'lease'">Yes</p>
+                        <p *ngIf="!details.furnished && details.adTypeName === 'lease'">No</p>
+                        <p *ngIf="details.gym && details.adTypeName === 'lease'">Yes</p>
+                        <p *ngIf="!details.gym && details.adTypeName === 'lease'">No</p>
+                        <p *ngIf="details.basement && details.adTypeName === 'sale'">Yes</p>
+                        <p *ngIf="!details.basement && details.adTypeName === 'sale'">No</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="leaseTerms" [ngStyle]="{'justify-content': (details.leaseTerms && details.leaseTerms.bestDeal) ? 'space-between' : 'unset' }" class="tabcontent" *ngIf="details">
+              <div class="lease-terms-contact">
+                <div>
+                  <img src="../../assets/phone.png" alt="phone">
+                  CONTACT AGENT
+                </div>
+                <div>
+                  <img src="../../assets/home-icn.png" alt="home">
+                  REQUEST TOUR
+                </div>
+                <div>
+                  <img src="../../assets/lease-icn.png" alt="lease">
+                  LEASE AGREEMENT
+                </div>
+              </div>
+
+              <div class="lease-terms" *ngIf="details.leaseTerms && details.leaseTerms.bestDeal">
+                <div class="best-deal">
+                  <img src="../../assets/sml-logo.png" alt="logo">
+                  BEST DEAL
+                </div>
+                <p style="text-transform: uppercase" class="months">{{details.leaseTerms.bestDeal.termName}}</p>
+                <p *ngIf="details.leaseTerms.bestDeal.termName !== 'flexible leasing agreements'" style="text-transform: uppercase" class="price">${{details.leaseTerms.bestDeal.termPrice}}</p>
+                <p *ngIf="details.leaseTerms.bestDeal.termName !== 'flexible leasing agreements'" style="text-transform: uppercase" class="months">{{details.leaseTerms.bestDeal.paymentFrequencyLongName}}<br> PAYMENT</p>
+                <div class="select">SELECT</div>
+              </div>
+
+              <div *ngIf="details.leaseTerms" class="lease-terms-options" [ngClass]="{'no-best-deal': (details.leaseTerms && !details.leaseTerms.bestDeal)}">
+                <div class="option" *ngFor="let option of details.leaseTerms.allOtherDeals">
+                  <p style="text-transform: uppercase">{{option.termName}}</p>
+                  <p class="price">
+                    <span *ngIf="option.termName !== 'flexible leasing agreements'" style="text-transform: uppercase">${{option.termPrice}}</span>
+                    <span *ngIf="option.termName !== 'flexible leasing agreements'" style="text-transform: uppercase" class="month"> / {{option.paymentFrequency}}</span>
+                  </p>
+                  <div class="select">SELECT</div>
+                </div>
+              </div>
+            </div>
+
+            <div id="gettingAround" class="tabcontent">
+                <div class="college-bar bar">
+                    <p class="college-bar-colleges">COLLEGES</p>
+                    <div>
+                        <p class="move">DRIVE</p>
+                        <p class="move">WALK</p>
+                        <p class="distance">DISTANCE</p>
+                    </div>
+                </div>
+                <div class="college-info">
+                    <div class="college-left">
+                        <p>Bellingham Technical College</p>
+                        <p>Whatcom Community College</p>
+                        <p>Western Washington University</p>
+                    </div>
+                    <div class="college-right">
+                        <div>
+                          <span>6 min</span>
+                          <span>20 min</span>
+                          <span>1.4 miles</span>
+                        </div>
+                      <div>
+                        <span>18 min</span>
+                        <span>35 min</span>
+                        <span>3.1 miles</span>
+                      </div>
+                      <div>
+                        <span>18 min</span>
+                        <span>50 min</span>
+                        <span>8 miles</span>
+                      </div>
+                    </div>
+                </div>
+              <div class="college-bar bar">
+                <p class="college-bar-colleges">SHOPPING CENTERS</p>
+                <div>
+                  <p class="move">DRIVE</p>
+                  <p class="move">WALK</p>
+                  <p class="distance">DISTANCE</p>
+                </div>
+              </div>
+              <div class="college-info">
+                <div class="college-left">
+                  <p>Strip Center 2417 Meridian St</p>
+                  <p>Strip Center 2417 Meridian St</p>
+                </div>
+                <div class="college-right">
+                  <div>
+                    <span>10 min</span>
+                    <span>5 min</span>
+                    <span>0.5 miles</span>
+                  </div>
+                  <div>
+                    <span>10 min</span>
+                    <span>5 min</span>
+                    <span>0.5 miles</span>
+                  </div>
+                </div>
+              </div>
+              <div class="college-bar bar">
+                <p class="college-bar-colleges">PARKS AND RECREATION</p>
+                <div>
+                  <p class="move">DRIVE</p>
+                  <p class="move">WALK</p>
+                  <p class="distance">DISTANCE</p>
+                </div>
+              </div>
+              <div class="college-info">
+                <div class="college-left">
+                  <p>Maritime Heritage Park</p>
+                  <p>Maritime Heritage Park</p>
+                  <p>Maritime Heritage Park</p>
+                </div>
+                <div class="college-right">
+                  <div>
+                    <span>10 min</span>
+                    <span>5 min</span>
+                    <span>0.5 miles</span>
+                  </div>
+                  <div>
+                    <span>10 min</span>
+                    <span>5 min</span>
+                    <span>0.5 miles</span>
+                  </div>
+                  <div>
+                    <span>10 min</span>
+                    <span>5 min</span>
+                    <span>0.5 miles</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- ********************************************************************* -->
+        </div>
+        <div class="map">
+          <agm-map [zoom]="15" style="width: 100%; height: 100%" [latitude]="lat" [longitude]="lng">
+            <agm-marker [iconUrl]="marker" [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+        </div>
+    </div>
+</div>
+
+<app-rec-footer></app-rec-footer>
+<app-footer></app-footer>

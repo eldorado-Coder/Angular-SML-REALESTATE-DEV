@@ -1,0 +1,262 @@
+<div class="header-container">
+    <div class="background">
+        <!-- put image div and overlay div here -->
+        <div class="background-image">
+            <div class="background-overlay"></div>
+        </div>
+
+
+        <form action="" class="search-form">
+            <input type="search" id="gsearch" name="gsearch" class="search-bar" placeholder="I am looking for...">
+            <input type="submit" class="submit-btn" value="SEARCH">
+        </form>
+        <div class="filters">
+            <form action="" class="container">
+
+                <div class="checkbox-test padding">
+                    <input type="checkbox" id="cb1">
+                    <label for="cb1" class="lease">LEASE</label>
+                </div>
+
+                <div class="checkbox-test padding">
+                    <input type="checkbox" id="cb2">
+                    <label for="cb2" class="buy">BUY</label>
+                </div>
+
+                <!-- COUNTRY SELECT -->
+                <div id="country">
+                    <div class="country text">COUNTRY<i class="fas fa-caret-down"></i></div>
+                    <div class="country-links">
+                        <a href="">UNITED STATES</a>
+                        <a href="">CANADA</a>
+                    </div>
+
+                </div>
+
+                <!-- STATE SELECT -->
+                <div id="usa">
+                    <div class="usa text">STATE<i class="fas fa-caret-down"></i></div>
+                    <div class="usa-links">
+                      <a href="">Arizona</a>
+                      <a href="">California</a>
+                      <a href="">Florida</a>
+                      <a href="">Georgia</a>
+                      <a href="">Illinois</a>
+                      <a href="">Massachusetts</a>
+                      <a href="">Michigan</a>
+                      <a href="">Ohio</a>
+                      <a href="">Texas</a>
+                      <a href="">Washington</a>
+                    </div>
+
+                </div>
+                <!-- CITY -->
+                <div id="city">
+                    <div class="city text">CITY<i class="fas fa-caret-down"></i></div>
+                    <div class="city-links">
+                        <!-- <a href="">MICHIGAN</a>
+                        <a href="">WASHINGTON</a>
+                        <a href="">FLORIDA</a> -->
+                    </div>
+
+                </div>
+                <!-- ZIPCODE -->
+                <div id="zip">
+                    <div class="zip text">ZIP CODE<i class="fas fa-caret-down"></i></div>
+                    <div class="zip-links">
+                        <!-- <a href="">MICHIGAN</a>
+                        <a href="">WASHINGTON</a>
+                        <a href="">FLORIDA</a> -->
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- ******************* MORE FILTERS ***************** -->
+<div class="more-filters">
+    <div class="basic-filter" [ngClass]="{'basic-filter-center' : noDisplay}">
+
+        <div id="homeType" [ngClass]="{'hiddenFilt' : noDisplay}">
+            <div class="homeType text">HOME TYPE<i class="fas fa-caret-down"></i></div>
+            <div class="homeType-links">
+                <a href="">HOUSE TYPE</a>
+                <a href="">APARTMENT</a>
+                <a href="">CONDO</a>
+                <a href="">TOWNHOUSE</a>
+                <a href="">STUDIO</a>
+                <a href="">OFFICE</a>
+                <a href="">VACATION RENTAL</a>
+                <a href="">PORTABLE CONSTRUCTION</a>
+                <button>DONE</button>
+            </div>
+
+        </div>
+
+        <div id="price" [ngClass]="{'hiddenFilt' : noDisplay}">
+            <div class="price text">PRICE<i class="fas fa-caret-down"></i></div>
+            <div class="price-links">
+                <label for="min">MIN</label>
+                <input type="text" class="min" id="min">
+                <label for="max">MAX</label>
+                <input type="text" class="max" id="max">
+            </div>
+
+        </div>
+
+        <div id="beds" [ngClass]="{'hiddenFilt' : noDisplay}">
+            <div class="beds text">BEDS<i class="fas fa-caret-down"></i></div>
+            <div class="beds-links">
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+            </div>
+
+        </div>
+
+        <div id="baths" [ngClass]="{'hiddenFilt' : noDisplay}">
+            <div class="baths text">BATHS<i class="fas fa-caret-down"></i></div>
+            <div class="baths-links">
+                <a href="">1</a>
+                <a href="">1.5</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5+</a>
+            </div>
+
+        </div>
+<!--        <div [ngClass]="{hiddenDrops : hiddenDrops}" id="sqf-lease">-->
+<!--            <div id="sqf">-->
+<!--                <div class="sqf text">SQUARE FEET<i class="fas fa-caret-down"></i></div>-->
+<!--                <div class="sqf-links">-->
+<!--                    <a href="">1</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div id="leaseDrop">-->
+<!--                <div class="leaseDrop text">LEASE LENGTH<i class="fas fa-caret-down"></i></div>-->
+<!--                <div class="leaseDrop-links">-->
+<!--                    <a href="">2</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div [ngClass]="{hiddenDrops : hiddenDrops}" id="sqf">
+          <div class="sqf text">SQUARE FEET<i class="fas fa-caret-down"></i></div>
+          <div class="sqf-links">
+            <a href="">1</a>
+          </div>
+        </div>
+        <div [ngClass]="{hiddenDrops : hiddenDrops}" id="leaseDrop">
+          <div class="leaseDrop text">LEASE LENGTH<i class="fas fa-caret-down"></i></div>
+          <div class="leaseDrop-links">
+            <a href="">2</a>
+          </div>
+        </div>
+        <button [ngClass]="{'hiddenFilt' : noDisplay}" class="filter-ex" (click)="moreFilters()" [ngClass]="{disBtn : disBtn}">
+            MORE FILTERS
+        </button>
+    </div>
+    <!-- hidden filters -->
+    <div class="hiddenFilters" [ngClass]="{noDisplay : noDisplay }">
+        <form action="" class="filter-dropdown">
+            <div class="hfd">
+                <div class="filter-row">
+                    <input type="checkbox" name="parking" id="parking">
+                    <label for="parking" class="extended-filters">PARKING</label>
+
+                </div>
+                <div class="filter-row">
+                    <input type="checkbox" name="heat" id="heat">
+                    <label for="heat" class="extended-filters">HEAT</label>
+
+                </div>
+                <div class="filter-row">
+                    <input type="checkbox" name="furnished" id="furnished">
+                    <label for="furnished" class="extended-filters">FURNISHED</label>
+
+                </div>
+            </div>
+            <div class="hfd">
+                <div class="filter-row">
+                    <input type="checkbox" name="petfriendly" id="petfriendly">
+                    <label for="petfriendly" class="extended-filters">PET FRIENDLY</label>
+
+                </div>
+                <div class="filter-row">
+                    <input type="checkbox" name="air-conditioned" id="air-conditioned">
+                    <label for="air-conditioned" class="extended-filters">A/C</label>
+
+                </div>
+                <div class="filter-row">
+                    <input type="checkbox" name="utilities" id="utilities">
+                    <label for="utilities" class="extended-filters">UTILITIES</label>
+
+                </div>
+            </div>
+            <div class="hfd">
+                <div class="filter-row">
+                    <input type="checkbox" name="storage" id="storage">
+                    <label for="storage" class="extended-filters">STORAGE</label>
+
+                </div>
+                <div class="filter-row">
+                    <input type="checkbox" name="pool" id="pool">
+                    <label for="pool" class="extended-filters">POOL</label>
+
+                </div>
+            </div>
+            <div class="hfd">
+                <div class="filter-row">
+                    <input type="checkbox" name="basement" id="basement">
+                    <label for="basement" class="extended-filters">BASEMENT</label>
+
+                </div>
+                <div class="filter-row">
+                    <input type="checkbox" name="washer" id="washer">
+                    <label for="washer" class="extended-filters">WASHER</label>
+
+                </div>
+            </div>
+            <div class="hfd sqf">
+                <div class="filter-row">
+                    <input type="checkbox" name="community-center" id="community-center">
+                    <label for="community-center" class="extended-filters">COMMUNITY CENTER</label>
+
+                </div>
+                <div class="filter-row">
+                    <input type="checkbox" name="dryer" id="dryer">
+                    <label for="dryer" class="extended-filters">DRYER</label>
+
+                </div>
+            </div>
+            <div class="hfd">
+                <div class="filter-row">
+                    <input type="checkbox" name="accessibility" id="accessibility">
+                    <label for="accessibility" class="extended-filters">ACCESSIBILITY</label>
+
+                </div>
+
+                <div class="filter-row absolute">
+                    <input type="checkbox" name="gym" id="gym">
+                    <label for="gym" class="extended-filters">GYM</label>
+
+                    <button class="filter-ex bottom">RESET FILTERS</button>
+                </div>
+
+            </div>
+
+        </form>
+        <!-- UP ARROW BUTTON -->
+        <div class="svg-up-arrow" [ngClass]="{noDisplay : noDisplay }" (click)="lessFilters()">
+          <img class="up-resting" src="../../assets/icons/up_resting.png">
+          <img class="up-hover" src="../../assets/icons/up_hover.png">
+        </div>
+    </div>
+
+</div>
